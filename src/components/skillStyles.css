@@ -1,0 +1,105 @@
+.container__skills {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  gap: 1.5rem;
+}
+
+.container__skills h3 {
+  display: inline-block;
+  padding: 0.4rem;
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+  border: 2px solid rgb(103, 103, 103);
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 560;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.container__skills hr {
+  background-color: rgb(220, 220, 220);
+  height: 0.1rem;
+  width: 100%;
+  border: none;
+}
+
+.container__skills p {
+  font-size: 1.3rem;
+}
+
+/* skill grid */
+.grid__skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: row;
+  gap: 1rem;
+  padding: 0.3rem;
+}
+
+.skill__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.skill__desc p {
+  font-size: 1rem;
+}
+
+.skill-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.skill__graphics {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.tech__skills,
+.prof__skills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.tech__skills h2,
+.prof__skills h2 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.circle-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.flat-bars {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}

@@ -1,0 +1,74 @@
+.container__project-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 auto;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 2px 4px 10px #acacac;
+}
+
+.thumbnail {
+  padding: 1rem;
+  background-color: #cccccc;
+  border-radius: 20px;
+}
+
+.thumbnail img {
+  height: 20rem;
+  width: 30rem;
+  border-radius: 20px;
+}
+
+.project__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.project__info h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+}
+
+.project__info p {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-stack button {
+  background-color: #cccccc;
+  border: none;
+  border-radius: 10px;
+  color: #2e2e2e;
+  padding: 0.7rem;
+  font-family: "Lato", sans-serif;
+}
+
+.project__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__btns button {
+  cursor: pointer;
+}
+
+.git {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #2e2e2e;
+  color: #2e2e2e;
+}

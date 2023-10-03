@@ -1,0 +1,168 @@
+.section__hero {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container__hero {
+  width: 100%;
+  min-height: 37rem;
+  background-color: #fff;
+  padding-top: 6rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* gap: 5rem; */
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 0.5rem;
+  width: 50%;
+  z-index: 2;
+}
+
+.intro h1 {
+  font-size: 3.2rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.intro h1 span {
+  color: #ff613e;
+}
+
+.intro h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 550;
+
+  color: #ababab;
+}
+
+.intro p {
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.resume-btn {
+  padding: 0.6rem;
+  width: 8rem;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  color: #2d2d2d;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.hire-me-btn {
+  padding: 0.6rem;
+  width: 8rem;
+  border-radius: 20px;
+  background-color: #ff613e;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.picture {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: -2%;
+  left: -5%;
+  height: 35rem;
+  width: 50rem;
+}
+
+.located {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.located .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.located p {
+  text-transform: capitalize;
+}
+
+.blob2 {
+  position: absolute;
+  top: -100%;
+  transform: rotateZ(70deg);
+  animation: blob2animate 40s ease-in-out infinite;
+}
+
+@keyframes blob2animate {
+  0% {
+    transform: rotateZ(70deg) translateY(-70rem);
+  }
+  100% {
+    transform: rotateZ(70deg) translateY(100rem) translateX(-20rem);
+  }
+}
+
+.blob3 {
+  position: absolute;
+  top: -12%;
+  width: 120%;
+  left: 80%;
+
+  animation: blob3animate 40s ease-in-out infinite;
+  animation-delay: 10s;
+}
+
+@keyframes blob3animate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-170%);
+  }
+}
+
+.blob4 {
+  position: absolute;
+  top: -130%;
+  left: 10%;
+  transform: translateX(100%);
+  animation: blob4animate 40s ease-in-out infinite;
+  animation-delay: 20s;
+}
+
+@keyframes blob4animate {
+  0% {
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

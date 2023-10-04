@@ -39,3 +39,9 @@ button {
   font-family: "Poppins", sans-serif;
   margin-top: 0.6rem;
 }
+
+@media screen and (max-width: 22.5em) {
+  .form {
+    width: 100%;
+  }
+}

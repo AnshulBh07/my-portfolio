@@ -31,7 +31,6 @@
 }
 
 .bar-final span {
-  width: 2rem;
   background-color: #ff613e;
   color: #fff;
   font-family: "Lato", sans-serif;
@@ -65,5 +64,29 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 22.5em) {
+  .container__flatbar {
+    width: 95%;
+  }
+
+  .bar-final span {
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    font-weight: 400;
+    border-radius: 5px;
+    left: 92%;
+    bottom: 0.7rem;
+  }
+
+  .bar-skill-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .bar {
+    height: 0.2rem;
   }
 }

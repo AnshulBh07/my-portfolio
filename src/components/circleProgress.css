@@ -35,3 +35,35 @@
   font-size: 1.3rem;
   font-weight: 500;
 }
+
+@media screen and (max-width: 22.5em) {
+  .container__circle {
+    margin-left: 0;
+    gap: 1rem;
+  }
+
+  .container__circle span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+  }
+
+  .circle__progress {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .span__container {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .base {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .progress-title {
+    font-family: "Lato", sans-serif;
+    font-weight: 0.8rem;
+  }
+}

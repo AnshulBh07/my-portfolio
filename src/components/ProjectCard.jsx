@@ -3,13 +3,10 @@ import "./projectCardStyles.css";
 const ProjectCard = ({ project, index, darkMode }) => {
   return (
     <div
-      className="container__project-card"
-      style={index % 2 === 0 ? { flexDirection: "row-reverse" } : {}}
+      className={`container__project-card ${index % 2 !== 0 ? "odd-card" : ""}`}
+      style={darkMode ? { boxShadow: "2px 4px 10px #212121" } : {}}
     >
-      <div
-        className="thumbnail"
-        style={darkMode ? { backgroundColor: "#a5a5a5" } : {}}
-      >
+      <div className="thumbnail">
         <img src={`${project.thumbnail}`} alt="" />
       </div>
       <div className="project__info" style={darkMode ? { color: "#fff" } : {}}>

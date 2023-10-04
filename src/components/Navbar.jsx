@@ -1,6 +1,8 @@
 import { navItemsArray } from "../navItems";
 import { BsSun } from "react-icons/bs";
 import { LuMoonStar } from "react-icons/lu";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CgClose } from "react-icons/cg";
 import "./navStyles.css";
 
 const Navbar = ({ sticky, darkMode, dispatch }) => {
@@ -11,7 +13,7 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
       className={`container__header ${sticky ? "sticky-header" : ""}`}
       style={darkMode ? styles : {}}
     >
-      <p>{`<AB />`}</p>
+      <p className="logo">{`<AB />`}</p>
       <nav className="navbar">
         <ul className="navlinks">
           {navItemsArray.map((item, index) => {
@@ -42,6 +44,15 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
           <BsSun className={`dark-mode ${sticky ? "sticky-dark-mode" : ""}`} />
         )}
       </button>
+
+      <div className="container__hamburger">
+        <button className="ham-btn open">
+          <RxHamburgerMenu className="ham-btn-icon" />
+        </button>
+        <button className="ham-btn close">
+          <CgClose className="ham-btn-icon" />
+        </button>
+      </div>
     </div>
   );
 };

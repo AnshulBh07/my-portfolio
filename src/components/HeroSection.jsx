@@ -1,8 +1,10 @@
 import "./heroStyles.css";
 import Blob from "../assets/images/blob.svg";
-import Blob2 from "../assets/images/blob2.svg";
+// import Blob2 from "../assets/images/blob2.svg";
 import { IoLocationOutline } from "react-icons/io5";
-import Blob3 from "../assets/images/blob3.svg";
+// import Blob3 from "../assets/images/blob3.svg";
+// import Blob4 from "../assets/images/blob2 - Copy.svg";
+// import Blob5 from "../assets/images/blob3 - Copy.svg";
 
 const HeroSection = ({ darkMode }) => {
   const style = { backgroundColor: "#212121", color: "#fff" };
@@ -11,9 +13,21 @@ const HeroSection = ({ darkMode }) => {
   return (
     <section className="section__hero">
       <div className="container__hero" style={darkMode ? style : {}}>
-        <img src={`${Blob2}`} alt="" className="blob2" />
-        <img src={`${Blob3}`} alt="" className="blob3" />
-        <img src={`${Blob3}`} alt="" className="blob4" />
+        {/* {darkMode ? (
+          <img src={`${Blob4}`} alt="" className="blob2" />
+        ) : (
+          <img src={`${Blob2}`} alt="" className="blob2" />
+        )}
+        {darkMode ? (
+          <img src={`${Blob5}`} alt="" className="blob3" />
+        ) : (
+          <img src={`${Blob3}`} alt="" className="blob3" />
+        )}
+        {darkMode ? (
+          <img src={`${Blob5}`} alt="" className="blob4" />
+        ) : (
+          <img src={`${Blob3}`} alt="" className="blob4" />
+        )} */}
         <div className="intro">
           <h3>Hi</h3>
           <h1>
@@ -31,7 +45,7 @@ const HeroSection = ({ darkMode }) => {
             <p>New Delhi, India</p>
           </div>
 
-          <div className="btns">
+          <div className="btns-hero">
             <button className="hire-me-btn">HIRE ME</button>
 
             <a href="Anshul_Bhardwaj_Resume.pdf" download={""}>
@@ -44,6 +58,15 @@ const HeroSection = ({ darkMode }) => {
 
         <div className="picture">
           <img src={Blob} alt="" className="blob" />
+          <div className="btns-hero second">
+            <button className="hire-me-btn">HIRE ME</button>
+
+            <a href="Anshul_Bhardwaj_Resume.pdf" download={""}>
+              <button className="resume-btn" style={darkMode ? btnStyle : {}}>
+                DOWNLOAD CV
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -30,16 +30,19 @@
 .dark-mode-btn {
   display: grid;
   place-items: center;
-  margin-left: 1.2rem;
   cursor: pointer;
   background-color: transparent;
-  border: none;
+  height: 100%;
+  border: 1px solid #212121;
+  margin-top: 0;
 }
 
 .dark-mode {
-  height: 1.5rem;
+  height: 100%;
   width: 1.5rem;
   color: #2d2d2d;
+  display: grid;
+  place-items: center;
 }
 
 .container__header > p {
@@ -66,4 +69,47 @@
 
 .sticky-header > p {
   font-size: 1.8rem;
+}
+
+.container__hamburger {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+
+.ham-btn {
+  background-color: transparent;
+  padding: 0.3rem;
+  border: 2px solid #212121;
+  margin-top: 0;
+  display: grid;
+  place-items: center;
+}
+
+.ham-btn-icon {
+  color: #212121;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media screen and (max-width: 22.5em) {
+  .container__header {
+    padding: 0.6rem 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sticky-header {
+    padding: 0.2rem 2rem;
+    position: fixed;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .container__header p {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 }

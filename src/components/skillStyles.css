@@ -103,3 +103,56 @@
   margin-bottom: 4rem;
   align-items: center;
 }
+
+@media screen and (max-width: 22.5em) {
+  .container__skills {
+    padding: 2rem 2rem;
+  }
+
+  .container__skills p {
+    font-size: 0.9rem;
+  }
+
+  .grid__skills {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .skill-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .skill__graphics {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  .tech__skills,
+  .prof__skills {
+    width: 100%;
+  }
+
+  .flat-bars {
+    margin-bottom: 0;
+  }
+
+  .tech__skills {
+    gap: 3rem;
+  }
+
+  .tech__skills h2,
+  .prof__skills h2 {
+    font-size: 0.8rem;
+  }
+
+  .skill__desc p {
+    font-size: 0.7rem;
+  }
+
+  .circle-bars {
+    padding: 1rem;
+  }
+}

@@ -80,3 +80,41 @@
   font-size: 1rem;
   line-height: 25px;
 }
+
+@media screen and (max-width: 22.5em) {
+  .container__about {
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .container__info {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .photo {
+    width: 100%;
+    place-items: center;
+  }
+
+  .container__image img {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .container__image {
+    height: 15rem;
+    width: 15rem;
+    justify-content: center;
+    box-shadow: -15px 15px rgb(209, 209, 209);
+  }
+
+  .info h2 {
+    font-size: 1.5rem;
+  }
+}

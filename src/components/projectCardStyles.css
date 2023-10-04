@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex: 1 1 auto;
   border-radius: 20px;
   padding: 1rem;
   box-shadow: 2px 4px 10px #acacac;
@@ -11,7 +10,6 @@
 
 .thumbnail {
   padding: 1rem;
-  background-color: #cccccc;
   border-radius: 20px;
 }
 
@@ -71,4 +69,48 @@
   border-radius: 10px;
   border: 2px solid #2e2e2e;
   color: #2e2e2e;
+}
+
+.odd-card {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 22.5em) {
+  .container__project-card {
+    flex-direction: column;
+    padding: 0;
+  }
+  .project__info {
+    width: 100%;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 10rem;
+  }
+
+  .thumbnail {
+    padding: 0.4rem;
+  }
+
+  .project__info {
+    padding: 1.2rem;
+  }
+
+  .project__info h2 {
+    font-size: 1.1rem;
+  }
+
+  .container__project p {
+    line-height: 20px;
+  }
+
+  .tech-stack {
+    gap: 0.6rem;
+  }
+  .tech-stack button {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 7px;
+  }
 }

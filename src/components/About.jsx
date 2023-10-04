@@ -18,7 +18,7 @@ const About = ({ darkMode }) => {
               style={
                 darkMode
                   ? {
-                      boxShadow: "-20px 20px #a5a5a5",
+                      boxShadow: "-20px 20px #212121",
                       border: "4px solid #2d2d2d",
                     }
                   : {}

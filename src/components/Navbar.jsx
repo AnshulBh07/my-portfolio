@@ -4,7 +4,7 @@ import { LuMoonStar } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 import "./navStyles.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const Navbar = ({ sticky, darkMode, dispatch }) => {
   const styles = { color: "#fff", backgroundColor: "#212121" };
@@ -12,20 +12,6 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
 
   //adding animation on view using ref and useEffect
   const navRef = useRef(null);
-  // const btnRef = useRef([]);
-
-  useEffect(() => {
-    // btnRef.current = btnRef.current.slice(0, navItemsArray.length);
-    // const observer = new IntersectionObserver((entries) => {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       console.log(btnRef.current);
-    //       return;
-    //     }
-    //   });
-    // });
-    // observer.observe(navRef.current);
-  }, []);
 
   return (
     <div

@@ -1,10 +1,30 @@
+import { useEffect, useRef } from "react";
 import "./projectCardStyles.css";
 
 const ProjectCard = ({ project, index, darkMode }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          cardRef.current.style.animation =
+            "slidefromDown 0.7s ease-in-out forwards";
+          cardRef.current.style.opacity = 0;
+        } else {
+          cardRef.current.style.animation = "";
+          cardRef.current.style.opacity = 0;
+        }
+      });
+    });
+
+    observer.observe(cardRef.current);
+  });
   return (
     <div
       className={`container__project-card ${index % 2 !== 0 ? "odd-card" : ""}`}
       style={darkMode ? { boxShadow: "2px 4px 10px #212121" } : {}}
+      ref={cardRef}
     >
       <div className="thumbnail">
         <img src={`${project.thumbnail}`} alt="" />

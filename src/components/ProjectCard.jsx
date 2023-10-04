@@ -8,8 +8,13 @@ const ProjectCard = ({ project, index, darkMode }) => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          cardRef.current.style.animation =
-            "slidefromDown 0.7s ease-in-out forwards";
+          if (index % 2 === 0) {
+            cardRef.current.style.animation =
+              "slidefromRight 0.7s ease-in-out forwards";
+          } else {
+            cardRef.current.style.animation =
+              "slidefromLeft 0.7s ease-in-out forwards";
+          }
           cardRef.current.style.opacity = 0;
         } else {
           cardRef.current.style.animation = "";

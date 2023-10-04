@@ -34,7 +34,7 @@
   background-color: transparent;
   height: 100%;
   margin-top: 0;
-  animation: slideFromRight 0.8s ease-in-out;
+  animation: slideFromRight 0.8s ease-in-out forwards;
 }
 
 .dark-mode {
@@ -51,13 +51,14 @@
   font-weight: 800;
   letter-spacing: 2px;
   transition: 0.1s;
-  animation: slideFromLeft 0.8s ease-in-out;
+  animation: slideFromLeft 0.8s ease-in-out forwards;
 }
 
 .sticky-header {
   padding: 0.4rem 8rem;
   background-color: #212121;
   color: #fff;
+  z-index: 5;
 }
 
 .sticky-link {
@@ -75,17 +76,20 @@
 .container__hamburger {
   display: flex;
   flex-direction: row;
+  visibility: hidden;
   display: none;
   animation: slideFromDown 0.9s ease-in-out forwards;
+
+  z-index: 5;
 }
 
 .ham-btn {
   background-color: transparent;
   padding: 0.3rem;
-  border: 2px solid #212121;
   margin-top: 0;
   display: grid;
   place-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .ham-btn-icon {
@@ -101,8 +105,7 @@
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   border-radius: 0px;
-  animation: slideFromDown 0.9s ease-in-out forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .navlinks li button hr {
@@ -171,9 +174,17 @@
     width: 100%;
     left: 0;
     height: 100vh;
-    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
-    z-index: 4;
+    z-index: 0;
+
+    transform: translateY(50%);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
   }
 
   .navlinks {
@@ -188,15 +199,26 @@
   }
 
   .container__hamburger {
+    visibility: visible;
     display: block;
     order: 3;
   }
 
-  .close {
-    display: none;
-  }
-
   .dark-mode-btn {
     order: 1;
+  }
+
+  .navbar-active {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .btn-hire-me {
+    background-color: #2d2d2d;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
   }
 }

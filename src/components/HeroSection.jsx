@@ -11,7 +11,7 @@ const HeroSection = ({ darkMode }) => {
   const btnStyle = { color: "#fff", border: "1px solid #fff" };
 
   return (
-    <section className="section__hero">
+    <section className="section__hero" id="hero">
       <div className="container__hero" style={darkMode ? style : {}}>
         {/* {darkMode ? (
           <img src={`${Blob4}`} alt="" className="blob2" />

@@ -1,11 +1,47 @@
 .cards {
   height: 100vh;
   width: 100%;
+  position: absolute;
+  z-index: 15;
+  transform: translateX(-100%);
 }
 
 .card-1 {
   height: 100%;
   width: 100%;
   background-color: #ff613e;
-  transform: translateX(-50%);
+  position: fixed;
+  animation: slideLeft 2.5s ease-in-out backwards;
+  z-index: 20;
+}
+
+.card-2 {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  animation: slideLeft 2.5s ease-in-out backwards;
+  animation-delay: 0.2s;
+  z-index: 18;
+}
+
+.card-3 {
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  position: fixed;
+  animation: slideLeft 2.5s ease-in-out;
+  z-index: 16;
+  animation-delay: 0.4s;
+}
+
+@keyframes slideLeft {
+  0% {
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX();
+  }
 }

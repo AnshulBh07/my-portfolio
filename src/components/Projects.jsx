@@ -4,7 +4,7 @@ import { projectsList } from "../projects";
 
 const Projects = ({ darkMode }) => {
   return (
-    <section className="section__project">
+    <section className="section__project" id="projects">
       <div
         className="container__project"
         style={darkMode ? { backgroundColor: "#2d2d2d", color: "#d5d5d5" } : {}}

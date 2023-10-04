@@ -29,7 +29,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [{ sticky, darkMode, inview }, dispatch] = useReducer(
+  const [{ sticky, darkMode, inview, count }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -74,17 +74,17 @@ function App() {
 
   return (
     <div className="App">
-      {/* <TransitionEffect /> */}
-      <header>
-        <Navbar sticky={sticky} darkMode={darkMode} dispatch={dispatch} />
-      </header>
-      <HeroSection darkMode={darkMode} />
+      <Navbar
+        darkMode={darkMode}
+        sticky={sticky}
+        dispatch={dispatch}
+        count={count}
+      />
+      <HeroSection darkMode={darkMode} sticky={sticky} dispatch={dispatch} />
       <About darkMode={darkMode} />
       <Skills graphRef={graphRef} inview={inview} darkMode={darkMode} />
       <Projects darkMode={darkMode} />
-      <footer>
-        <ContactMe darkMode={darkMode} />
-      </footer>
+      <ContactMe darkMode={darkMode} />
     </div>
   );
 }

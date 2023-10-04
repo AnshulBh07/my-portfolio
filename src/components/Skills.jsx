@@ -6,7 +6,7 @@ import { profSkills } from "../profSkillItems";
 
 const Skills = ({ graphRef, inview, darkMode }) => {
   return (
-    <section className="section__skills">
+    <section className="section__skills" id="skills">
       <div
         className="container__skills"
         style={darkMode ? { backgroundColor: "#212121" } : {}}

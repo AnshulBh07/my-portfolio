@@ -3,7 +3,7 @@ import Pic2 from "../assets/images/photo2.png";
 
 const About = ({ darkMode }) => {
   return (
-    <section className="section__about">
+    <section className="section__about" id="about">
       <div
         className="container__about"
         style={darkMode ? { backgroundColor: "#2d2d2d" } : {}}

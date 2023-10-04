@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
+import TransitionEffect from "./components/TransitionEffect";
 import Projects from "./components/Projects";
 
 //let's use useReducer instead of useState
@@ -73,6 +74,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* <TransitionEffect /> */}
       <header>
         <Navbar sticky={sticky} darkMode={darkMode} dispatch={dispatch} />
       </header>

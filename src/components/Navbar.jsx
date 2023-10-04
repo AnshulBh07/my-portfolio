@@ -6,7 +6,7 @@ import { CgClose } from "react-icons/cg";
 import "./navStyles.css";
 
 const Navbar = ({ sticky, darkMode, dispatch }) => {
-  const styles = { color: "#fff" };
+  const styles = { color: "#fff", backgroundColor: "#212121" };
 
   return (
     <div
@@ -19,13 +19,17 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
           {navItemsArray.map((item, index) => {
             return (
               <li key={index}>
-                <a
-                  href={`${item.link}`}
+                <button
                   className={`link ${sticky ? "sticky-link" : ""}`}
-                  style={darkMode ? styles : {}}
+                  style={
+                    darkMode
+                      ? { ...styles, animationDelay: `${(index + 1) * 0.2}s` }
+                      : { animationDelay: `${(index + 1) * 0.1}s` }
+                  }
                 >
                   {item.text}
-                </a>
+                  <hr />
+                </button>
               </li>
             );
           })}

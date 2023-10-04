@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem 8rem;
+  justify-content: space-between;
   background-color: transparent;
   position: fixed;
   z-index: 5;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 
 .navlinks {
@@ -33,8 +33,8 @@
   cursor: pointer;
   background-color: transparent;
   height: 100%;
-  border: 1px solid #212121;
   margin-top: 0;
+  animation: slideFromRight 0.8s ease-in-out;
 }
 
 .dark-mode {
@@ -51,6 +51,7 @@
   font-weight: 800;
   letter-spacing: 2px;
   transition: 0.1s;
+  animation: slideFromLeft 0.8s ease-in-out;
 }
 
 .sticky-header {
@@ -75,6 +76,7 @@
   display: flex;
   flex-direction: row;
   display: none;
+  animation: slideFromDown 0.9s ease-in-out forwards;
 }
 
 .ham-btn {
@@ -92,24 +94,109 @@
   width: 1.5rem;
 }
 
+.navlinks li button {
+  margin-top: 0;
+  background-color: transparent;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0px;
+  animation: slideFromDown 0.9s ease-in-out forwards;
+  opacity: 0;
+}
+
+.navlinks li button hr {
+  height: 0.16rem;
+  background-color: #212121;
+  width: 0%;
+  border: none;
+}
+
+@keyframes buttonHoverBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media screen and (max-width: 22.5em) {
   .container__header {
     padding: 0.6rem 2rem;
-    justify-content: center;
     align-items: center;
+    z-index: 5;
   }
 
   .sticky-header {
     padding: 0.2rem 2rem;
-    position: fixed;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    display: none;
+    background-color: #fff;
+    z-index: 4;
   }
 
   .navlinks {
-    display: none;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .container__header p {
     font-size: 2rem;
     font-weight: 600;
+    order: 2;
+  }
+
+  .container__hamburger {
+    display: block;
+    order: 3;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .dark-mode-btn {
+    order: 1;
   }
 }

@@ -23,8 +23,10 @@
   width: 8rem;
   height: 2.5rem;
   text-align: center;
-  border: 3px solid rgb(103, 103, 103);
-  border-radius: 25px;
+  border: none;
+  border-radius: 15px;
+  background-color: #cccccc;
+  color: #212121;
   font-family: "Poppins", sans-serif;
   font-weight: 560;
   font-size: 1rem;
@@ -84,6 +86,17 @@
   font-size: 1rem;
   line-height: 25px;
   transition: 3.5s;
+}
+
+@keyframes slideFromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 22.5em) {

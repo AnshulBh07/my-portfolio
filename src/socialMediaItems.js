@@ -1,10 +1,4 @@
-import {
-  BsInstagram,
-  BsFacebook,
-  BsWhatsapp,
-  BsLinkedin,
-  BsGithub,
-} from "react-icons/bs";
+import { BsInstagram, BsWhatsapp, BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
 
 export const mediaItems = [

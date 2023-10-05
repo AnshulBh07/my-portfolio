@@ -13,13 +13,13 @@ import IconPostgreSQL from "./assets/images/icons/postgreSQL.png";
 //proficiency is in %
 export const skills = [
   { name: "React", icon: IconReact, proficiency: 85 },
-  { name: "JavaScript", icon: IconJS, proficiency: 88 },
+  { name: "JavaScript", icon: IconJS, proficiency: 78 },
   { name: "HTML", icon: IconHTML, proficiency: 95 },
-  { name: "CSS", icon: IconCSS, proficiency: 90 },
-  { name: "C++", icon: IconCPlus, proficiency: 96 },
-  { name: "Node.js", icon: IconNode, proficiency: 65 },
-  { name: "Express.js", icon: IconExpress, proficiency: 0 },
-  { name: "PostgreSQL", icon: IconPostgreSQL, proficiency: 0 },
-  { name: "C#", icon: IconCSharp, proficiency: 0 },
-  { name: "Java", icon: IconJava, proficiency: 0 },
+  { name: "CSS", icon: IconCSS, proficiency: 80 },
+  { name: "C++", icon: IconCPlus, proficiency: 90 },
+  { name: "Node.js", icon: IconNode, proficiency: 64 },
+  { name: "Express.js", icon: IconExpress, proficiency: 46 },
+  { name: "PostgreSQL", icon: IconPostgreSQL, proficiency: 73 },
+  { name: "C#", icon: IconCSharp, proficiency: 60 },
+  { name: "Java", icon: IconJava, proficiency: 60 },
 ];

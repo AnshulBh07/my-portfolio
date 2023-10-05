@@ -13,6 +13,7 @@ const initialState = {
   darkMode: false,
   inview: false,
   scrlDisable: false,
+  animate: false,
 };
 
 function reducer(state, action) {
@@ -25,6 +26,8 @@ function reducer(state, action) {
       return { ...state, inview: action.payload };
     case "disableScroll":
       return { ...state, scrlDisable: action.payload };
+    case "transitionAnimation":
+      return { ...state, animate: action.payload };
     default:
       return state;
   }
@@ -96,6 +99,7 @@ function App() {
         sticky={sticky}
         dispatch={dispatch}
         heroRef={heroRef}
+        refArray={refArray}
       />
       <About darkMode={darkMode} aboutRef={aboutRef} />
       <Skills

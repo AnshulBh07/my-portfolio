@@ -11,7 +11,11 @@ const Projects = ({ darkMode, projectsRef }) => {
         className="container__project"
         style={darkMode ? { backgroundColor: "#2d2d2d", color: "#d5d5d5" } : {}}
       >
-        <h3 style={darkMode ? { border: "1px solid #fff", color: "#fff" } : {}}>
+        <h3
+          style={
+            darkMode ? { color: "#d5d5d5", backgroundColor: "#212121" } : {}
+          }
+        >
           Projects
         </h3>
         <p style={darkMode ? { color: "#d5d5d5" } : {}}>

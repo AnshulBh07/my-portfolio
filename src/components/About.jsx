@@ -8,7 +8,11 @@ const About = ({ darkMode, aboutRef }) => {
         className="container__about"
         style={darkMode ? { backgroundColor: "#2d2d2d" } : {}}
       >
-        <h3 style={darkMode ? { border: "1px solid #fff", color: "#fff" } : {}}>
+        <h3
+          style={
+            darkMode ? { color: "#d5d5d5", backgroundColor: "#212121" } : {}
+          }
+        >
           About
         </h3>
         <div className="container__info">

@@ -36,41 +36,41 @@ const Navbar = ({ sticky, darkMode, dispatch, refArray }) => {
 
     switch (val) {
       case "Home":
-        dispatch({ type: "disableScroll", payload: false });
         setNavbar(false);
         setAnimate(true);
+        dispatch({ type: "disableScroll", payload: false });
         setTimeout(() => {
           refArray[0].current?.scrollIntoView({ behavior: "smooth" });
         }, 1900);
         break;
       case "About":
-        dispatch({ type: "disableScroll", payload: false });
         setNavbar(false);
+        dispatch({ type: "disableScroll", payload: false });
         setAnimate(true);
         setTimeout(() => {
           refArray[1].current?.scrollIntoView({ behavior: "smooth" });
         }, 1900);
         break;
       case "Skills":
-        dispatch({ type: "disableScroll", payload: false });
         setNavbar(false);
+        dispatch({ type: "disableScroll", payload: false });
         setAnimate(true);
         setTimeout(() => {
           refArray[2].current?.scrollIntoView({ behavior: "smooth" });
         }, 1900);
         break;
       case "Projects":
-        dispatch({ type: "disableScroll", payload: false });
         setNavbar(false);
+        dispatch({ type: "disableScroll", payload: false });
         setAnimate(true);
         setTimeout(() => {
           refArray[3].current?.scrollIntoView({ behavior: "smooth" });
         }, 1900);
         break;
       case "Contact Me":
-        dispatch({ type: "disableScroll", payload: false });
         setNavbar(false);
         setAnimate(true);
+        dispatch({ type: "disableScroll", payload: false });
         setTimeout(() => {
           refArray[4].current?.scrollIntoView({ behavior: "smooth" });
         }, 1900);
@@ -107,6 +107,7 @@ const Navbar = ({ sticky, darkMode, dispatch, refArray }) => {
                           }
                         : {
                             animationDelay: `${(index + 1) * 0.1}s`,
+                            transition: "3.5s",
                           }
                     }
                     onClick={handleScrollClick}
@@ -137,7 +138,9 @@ const Navbar = ({ sticky, darkMode, dispatch, refArray }) => {
               className="ham-btn open"
               onClick={() => {
                 setNavbar(true);
-                dispatch({ type: "disableScroll", payload: true });
+                setTimeout(() => {
+                  dispatch({ type: "disableScroll", payload: true });
+                }, 400);
               }}
             >
               <RxHamburgerMenu

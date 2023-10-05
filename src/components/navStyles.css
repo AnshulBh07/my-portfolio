@@ -14,7 +14,7 @@
 .navlinks {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 4rem;
   list-style-type: none;
   align-items: center;
 }
@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 22.5em) {
   .container__header {
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1rem;
     align-items: center;
     z-index: 5;
   }

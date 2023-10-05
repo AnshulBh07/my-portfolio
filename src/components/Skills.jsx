@@ -11,7 +11,9 @@ const Skills = ({ graphRef, inview, darkMode, skillsRef }) => {
         className="container__skills"
         style={darkMode ? { backgroundColor: "#212121" } : {}}
       >
-        <h3 style={darkMode ? { border: "1px solid #fff", color: "#fff" } : {}}>
+        <h3
+          style={darkMode ? { color: "#fff", backgroundColor: "#1a1a1a" } : {}}
+        >
           Skills
         </h3>
 

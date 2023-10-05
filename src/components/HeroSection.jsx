@@ -6,12 +6,16 @@ import { IoLocationOutline } from "react-icons/io5";
 // import Blob4 from "../assets/images/blob2 - Copy.svg";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
 
-const HeroSection = ({ darkMode, heroRef }) => {
+const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
   const style = {
     backgroundColor: "#212121",
     color: "#fff",
   };
   const btnStyle = { color: "#fff", border: "1px solid #fff" };
+
+  function handleClick() {
+    refArray[4].current?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <section className="section__hero" id="hero" ref={heroRef}>
@@ -49,7 +53,9 @@ const HeroSection = ({ darkMode, heroRef }) => {
           </div>
 
           <div className="btns-hero">
-            <button className="hire-me-btn">HIRE ME</button>
+            <button className="hire-me-btn" onClick={handleClick}>
+              CONTACT ME
+            </button>
 
             <a href="Anshul_Bhardwaj_Resume.pdf" download={""}>
               <button className="resume-btn" style={darkMode ? btnStyle : {}}>
@@ -62,7 +68,12 @@ const HeroSection = ({ darkMode, heroRef }) => {
         <div className="picture">
           <img src={Blob} alt="" className="blob" />
           <div className="btns-hero second">
-            <button className="hire-me-btn">HIRE ME</button>
+            <button
+              className="hire-me-btn"
+              onClick={() => console.log("clicked")}
+            >
+              HIRE ME
+            </button>
 
             <a href="Anshul_Bhardwaj_Resume.pdf" download={""}>
               <button className="resume-btn" style={darkMode ? btnStyle : {}}>

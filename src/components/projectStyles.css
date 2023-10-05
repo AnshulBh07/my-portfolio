@@ -26,8 +26,10 @@
   width: 8rem;
   height: 2.5rem;
   text-align: center;
-  border: 3px solid rgb(103, 103, 103);
-  border-radius: 25px;
+  border: none;
+  border-radius: 15px;
+  background-color: #cccccc;
+  color: #212121;
   font-family: "Poppins", sans-serif;
   font-weight: 560;
   font-size: 1rem;

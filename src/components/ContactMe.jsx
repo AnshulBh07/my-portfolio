@@ -30,9 +30,11 @@ const ContactMe = ({ darkMode, contactRef }) => {
                   <div className="list-icons">
                     {mediaItems.map((item, index) => {
                       return (
-                        <button key={index} className="footer-icon-btn">
-                          {item.icon}
-                        </button>
+                        <a href={`${item.link}`}>
+                          <button key={index} className="footer-icon-btn">
+                            {item.icon}
+                          </button>
+                        </a>
                       );
                     })}
                   </div>

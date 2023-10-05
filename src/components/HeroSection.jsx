@@ -2,6 +2,8 @@ import "./heroStyles.css";
 import Blob from "../assets/images/blob.svg";
 // import Blob2 from "../assets/images/blob2.svg";
 import { IoLocationOutline } from "react-icons/io5";
+import darkImage from "../assets/images/darkModeImage.png";
+import { mediaItems } from "../socialMediaItems";
 // import Blob3 from "../assets/images/blob3.svg";
 // import Blob4 from "../assets/images/blob2 - Copy.svg";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
@@ -40,7 +42,7 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
           <h1>
             i'm <span>anshul bhardwaj</span>
           </h1>
-          <h3>Aspiring Frontend Developer</h3>
+          <h3 className="bottom-h3">Aspiring Frontend Developer</h3>
           <p>
             an exceptional react developer in the making, headed out to the road
             of mastery!
@@ -53,7 +55,11 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
           </div>
 
           <div className="btns-hero">
-            <button className="hire-me-btn" onClick={handleClick}>
+            <button
+              className="hire-me-btn"
+              onClick={handleClick}
+              style={darkMode ? { boxShadow: "6px 6px 10px #000" } : {}}
+            >
               CONTACT ME
             </button>
 
@@ -66,20 +72,18 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
         </div>
 
         <div className="picture">
-          <img src={Blob} alt="" className="blob" />
-          <div className="btns-hero second">
-            <button
-              className="hire-me-btn"
-              onClick={() => console.log("clicked")}
-            >
-              HIRE ME
-            </button>
-
-            <a href="Anshul_Bhardwaj_Resume.pdf" download={""}>
-              <button className="resume-btn" style={darkMode ? btnStyle : {}}>
-                DOWNLOAD CV
-              </button>
-            </a>
+          {!darkMode && <img src={Blob} alt="" className="blob" />}
+          {darkMode && (
+            <img src={`${darkImage}`} alt="dark" className="dark-mode-img" />
+          )}
+          <div className="hero-list-icons">
+            {mediaItems.map((item, index) => {
+              return (
+                <a href={`${item.link}`} key={index}>
+                  <button className="hero-footer-icon-btn">{item.icon}</button>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

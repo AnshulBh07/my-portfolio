@@ -35,6 +35,7 @@
   height: 100%;
   margin-top: 0;
   animation: slideFromRight 0.8s ease-in-out forwards;
+  border: none;
 }
 
 .dark-mode {
@@ -90,6 +91,7 @@
   display: grid;
   place-items: center;
   transition: all 0.5s ease-in-out;
+  border: none;
 }
 
 .ham-btn-icon {
@@ -107,6 +109,7 @@
   border-radius: 0px;
   animation: slideFromDown 0.6s ease-in-out forwards;
   opacity: 0;
+  border: none;
   font-size: 1.1rem;
   border-radius: 8px;
 }
@@ -162,7 +165,7 @@
 
 @media screen and (max-width: 22.5em) {
   .container__header {
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1rem;
     align-items: center;
     z-index: 5;
   }

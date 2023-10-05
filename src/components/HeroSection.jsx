@@ -7,7 +7,10 @@ import { IoLocationOutline } from "react-icons/io5";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
 
 const HeroSection = ({ darkMode }) => {
-  const style = { backgroundColor: "#212121", color: "#fff" };
+  const style = {
+    backgroundColor: "#212121",
+    color: "#fff",
+  };
   const btnStyle = { color: "#fff", border: "1px solid #fff" };
 
   return (

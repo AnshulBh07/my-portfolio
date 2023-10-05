@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  transition: 3.5s;
   /* gap: 5rem; */
 }
 

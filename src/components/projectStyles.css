@@ -16,6 +16,7 @@
   align-items: center;
   gap: 2rem;
   border: none;
+  transition: 3.5s;
 }
 
 .container__project h3 {
@@ -28,6 +29,7 @@
   border-radius: 25px;
   font-family: "Poppins", sans-serif;
   font-weight: 560;
+  transition: 3.5s;
   font-size: 1rem;
   margin: 1rem;
 }
@@ -35,6 +37,7 @@
 .container__project p {
   font-family: "Lato", sans-serif;
   color: #2e2e2e;
+  transition: 3.5s;
   font-size: 1.2rem;
 }
 

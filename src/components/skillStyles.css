@@ -8,6 +8,7 @@
   align-items: center;
   font-family: "Lato", sans-serif;
   gap: 1.5rem;
+  transition: 3.5s;
 }
 
 .container__skills h3 {
@@ -21,6 +22,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 560;
   font-size: 1rem;
+  transition: 3.5s;
   margin: 1rem;
 }
 
@@ -29,9 +31,11 @@
   height: 0.1rem;
   width: 100%;
   border: none;
+  transition: 3.5s;
 }
 
 .container__skills p {
+  transition: 3.5s;
   font-size: 1.3rem;
 }
 
@@ -85,6 +89,7 @@
 .prof__skills h2 {
   font-size: 1.2rem;
   color: #2d2d2d;
+  transition: 3.5s;
 }
 
 .circle-bars {

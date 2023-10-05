@@ -25,6 +25,7 @@ const ProjectCard = ({ project, index, darkMode }) => {
 
     observer.observe(cardRef.current);
   });
+
   return (
     <div
       className={`container__project-card ${index % 2 !== 0 ? "odd-card" : ""}`}

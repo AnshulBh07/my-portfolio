@@ -4,22 +4,36 @@ import { LuMoonStar } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 import "./navStyles.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import TransitionEffect from "./TransitionEffect";
 
 const Navbar = ({ sticky, darkMode, dispatch }) => {
   const styles = { color: "#fff", backgroundColor: "#212121" };
   const [navbar, setNavbar] = useState(false);
-  const [count, setCount] = useState(0);
+  const [animate, setAnimate] = useState(false);
+
+  //settimeout if it renders with animate true
+  //use effect hook to clear the timeout timer for each render
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setAnimate(false);
+      console.log(animate);
+    }, 2900);
+
+    return () => clearTimeout(id);
+  }, [animate]);
 
   //adding animation on view using ref and useEffect
   const navRef = useRef(null);
 
   function handleClick() {
-    setCount(count + 1);
+    dispatch({ type: "toggleDarkMode" });
+    setAnimate(true);
   }
 
   return (
     <header>
+      <TransitionEffect animate={animate} />
       <div
         className={`container__header ${sticky ? "sticky-header" : ""}`}
         style={darkMode ? styles : {}}
@@ -47,13 +61,7 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
             })}
           </ul>
         </nav>
-        <button
-          className="dark-mode-btn"
-          onClick={() => {
-            dispatch({ type: "toggleDarkMode" });
-            dispatch({ type: "goTo" });
-          }}
-        >
+        <button className="dark-mode-btn" onClick={handleClick}>
           {darkMode ? (
             <LuMoonStar
               className={`dark-mode ${sticky ? "sticky-dark-mode" : ""}`}

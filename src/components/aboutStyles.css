@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transition: 3.5s;
 }
 
 .container__about h3 {
@@ -28,6 +29,7 @@
   font-weight: 560;
   font-size: 1rem;
   margin: 1rem;
+  transition: 3.5s;
 }
 
 .container__info {
@@ -54,6 +56,7 @@
   border-radius: 50%;
   border: 4px solid rgb(244, 244, 244);
   box-shadow: -20px 20px rgb(209, 209, 209);
+  transition: 3.5s;
 }
 
 .container__image img {
@@ -73,12 +76,14 @@
 .info h2 {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
+  transition: 3.5s;
 }
 
 .info p {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   line-height: 25px;
+  transition: 3.5s;
 }
 
 @media screen and (max-width: 22.5em) {

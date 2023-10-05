@@ -59,15 +59,22 @@ const ProjectCard = ({ project, index, darkMode }) => {
           })}
         </div>
         <div className="project__btns">
-          <button
-            className="git"
-            style={
-              darkMode ? { border: "2px solid #d5d5d5", color: "#d5d5d5" } : {}
-            }
-          >
-            View on Github
-          </button>
-          <button className="demo">Demo</button>
+          <a href={`${project.gitlink}`}>
+            <button
+              className="git"
+              style={
+                darkMode
+                  ? { border: "2px solid #d5d5d5", color: "#d5d5d5" }
+                  : {}
+              }
+            >
+              View on Github
+            </button>
+          </a>
+
+          <a href={`${project.demolink}`}>
+            <button className="demo">Demo</button>
+          </a>
         </div>
       </div>
     </div>

@@ -3,9 +3,9 @@ import "./projectStyles.css";
 import { projectsList } from "../projects";
 import TransitionEffect from "./TransitionEffect";
 
-const Projects = ({ darkMode }) => {
+const Projects = ({ darkMode, projectsRef }) => {
   return (
-    <section className="section__project" id="projects">
+    <section className="section__project" id="projects" ref={projectsRef}>
       <TransitionEffect />
       <div
         className="container__project"

@@ -5,7 +5,6 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
-import TransitionEffect from "./components/TransitionEffect";
 import Projects from "./components/Projects";
 
 //let's use useReducer instead of useState
@@ -13,6 +12,7 @@ const initialState = {
   sticky: false,
   darkMode: false,
   inview: false,
+  scrlDisable: false,
 };
 
 function reducer(state, action) {
@@ -23,13 +23,15 @@ function reducer(state, action) {
       return { ...state, darkMode: state.darkMode ? false : true };
     case "inView":
       return { ...state, inview: action.payload };
+    case "disableScroll":
+      return { ...state, scrlDisable: action.payload };
     default:
       return state;
   }
 }
 
 function App() {
-  const [{ sticky, darkMode, inview, count }, dispatch] = useReducer(
+  const [{ sticky, darkMode, inview, scrlDisable }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -72,19 +74,38 @@ function App() {
     observer.observe(graphRef.current);
   }, [inview]);
 
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  //push all refs into an array
+  const refArray = [heroRef, aboutRef, skillsRef, projectsRef, contactRef];
+
   return (
-    <div className="App">
+    <div className={`App ${scrlDisable ? "scroll-disable" : ""}`}>
       <Navbar
         darkMode={darkMode}
         sticky={sticky}
         dispatch={dispatch}
-        count={count}
+        refArray={refArray}
       />
-      <HeroSection darkMode={darkMode} sticky={sticky} dispatch={dispatch} />
-      <About darkMode={darkMode} />
-      <Skills graphRef={graphRef} inview={inview} darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <ContactMe darkMode={darkMode} />
+      <HeroSection
+        darkMode={darkMode}
+        sticky={sticky}
+        dispatch={dispatch}
+        heroRef={heroRef}
+      />
+      <About darkMode={darkMode} aboutRef={aboutRef} />
+      <Skills
+        graphRef={graphRef}
+        inview={inview}
+        darkMode={darkMode}
+        skillsRef={skillsRef}
+      />
+      <Projects darkMode={darkMode} projectsRef={projectsRef} />
+      <ContactMe darkMode={darkMode} contactRef={contactRef} />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 // import Blob4 from "../assets/images/blob2 - Copy.svg";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
 
-const HeroSection = ({ darkMode }) => {
+const HeroSection = ({ darkMode, heroRef }) => {
   const style = {
     backgroundColor: "#212121",
     color: "#fff",
@@ -14,7 +14,7 @@ const HeroSection = ({ darkMode }) => {
   const btnStyle = { color: "#fff", border: "1px solid #fff" };
 
   return (
-    <section className="section__hero" id="hero">
+    <section className="section__hero" id="hero" ref={heroRef}>
       <div className="container__hero" style={darkMode ? style : {}}>
         {/* {darkMode ? (
           <img src={`${Blob4}`} alt="" className="blob2" />
@@ -36,10 +36,10 @@ const HeroSection = ({ darkMode }) => {
           <h1>
             i'm <span>anshul bhardwaj</span>
           </h1>
-          <h3>an aspiring Frontend Developer</h3>
+          <h3>Aspiring Frontend Developer</h3>
           <p>
-            awesome react developer in the making, headed out to the road of
-            mastery!
+            an exceptional react developer in the making, headed out to the road
+            of mastery!
           </p>
           <p>Welcome to my portfolio website.</p>
 

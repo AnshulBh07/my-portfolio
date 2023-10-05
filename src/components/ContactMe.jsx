@@ -2,10 +2,10 @@ import "./contactStyles.css";
 import { mediaItems } from "../socialMediaItems";
 import ContactForm from "./ContactForm";
 
-const ContactMe = ({ darkMode }) => {
+const ContactMe = ({ darkMode, contactRef }) => {
   return (
     <footer>
-      <section className="section__contact" id="contactme">
+      <section className="section__contact" id="contact me" ref={contactRef}>
         <div
           className="container__contact__main"
           style={darkMode ? { backgroundColor: "#212121" } : {}}

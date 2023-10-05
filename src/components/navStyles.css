@@ -107,6 +107,8 @@
   border-radius: 0px;
   animation: slideFromDown 0.6s ease-in-out forwards;
   opacity: 0;
+  font-size: 1.1rem;
+  border-radius: 8px;
 }
 
 .navlinks li button hr {
@@ -214,6 +216,19 @@
     visibility: visible;
     pointer-events: all;
     opacity: 1;
+
+    background-color: #fff;
+    color: #212121;
+  }
+
+  .navbar-active-dark {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+
+    background-color: #212121;
+    color: #fff;
   }
 
   .btn-hire-me {

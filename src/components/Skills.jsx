@@ -4,9 +4,9 @@ import FlatBar from "./FlatBar";
 import CircleProgress from "./CircleProgress";
 import { profSkills } from "../profSkillItems";
 
-const Skills = ({ graphRef, inview, darkMode }) => {
+const Skills = ({ graphRef, inview, darkMode, skillsRef }) => {
   return (
-    <section className="section__skills" id="skills">
+    <section className="section__skills" id="skills" ref={skillsRef}>
       <div
         className="container__skills"
         style={darkMode ? { backgroundColor: "#212121" } : {}}

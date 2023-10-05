@@ -1,9 +1,9 @@
 import "./aboutStyles.css";
 import Pic2 from "../assets/images/photo2.png";
 
-const About = ({ darkMode }) => {
+const About = ({ darkMode, aboutRef }) => {
   return (
-    <section className="section__about" id="about">
+    <section className="section__about" id="about" ref={aboutRef}>
       <div
         className="container__about"
         style={darkMode ? { backgroundColor: "#2d2d2d" } : {}}

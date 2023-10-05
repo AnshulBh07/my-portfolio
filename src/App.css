@@ -23,3 +23,9 @@
 .App header {
   width: 100%;
 }
+
+.scroll-disable {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}

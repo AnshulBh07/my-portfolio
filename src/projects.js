@@ -17,8 +17,9 @@ export const projectsList = [
       "Vanilla CSS",
       "RestfulAPI",
     ],
-    gitlink: "",
-    demolink: "",
+    gitlink:
+      "https://github.com/AnshulBh07/Fully-responsive-weather-app-in-React",
+    demolink: "https://borks-responsive-weather-app.netlify.app/",
   },
   {
     name: "Quiz App",
@@ -34,8 +35,8 @@ export const projectsList = [
       "Node.js",
       "Express.js",
     ],
-    gitlink: "",
-    demolink: "",
+    gitlink: "https://github.com/AnshulBh07/React-quiz-app-frontend",
+    demolink: "https://borks-react-quiz.netlify.app/",
   },
   {
     name: "Dashboard",
@@ -43,8 +44,8 @@ export const projectsList = [
     description:
       "An online dashboard that displays any relevant data. Uses axios to fetch the relevenat data and ChartJs to display it. Supports google sign-in with OAuth 2.0. Let's user add new profiles. Fully responsive in nature.",
     tech: ["React.js", "API", "OAuth 2.0", "Axios", "HTML", "CSS"],
-    gitlink: "",
-    demolink: "",
+    gitlink: "https://github.com/AnshulBh07/React-Dashboard",
+    demolink: "https://react-dashboard-assignmentopeninapp.netlify.app/",
   },
   {
     name: "2048 Game",
@@ -52,7 +53,7 @@ export const projectsList = [
     description:
       "Implemented a famous mathematical board game called 2048.A tile sliding block puzzle where the user's objective is to combine grids to create a tile with the number 2048. However user can continue the game and create up to 8192",
     tech: ["JavaScript", "HTML", "CSS"],
-    gitlink: "",
+    gitlink: "https://github.com/AnshulBh07/2048-Game-in-Javascript",
     demolink: "",
   },
 ];

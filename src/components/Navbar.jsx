@@ -7,7 +7,7 @@ import "./navStyles.css";
 import { useEffect, useRef, useState } from "react";
 import TransitionEffect from "./TransitionEffect";
 
-const Navbar = ({ sticky, darkMode, dispatch }) => {
+const Navbar = ({ sticky, darkMode, dispatch, refArray }) => {
   const styles = { color: "#fff", backgroundColor: "#212121" };
   const [navbar, setNavbar] = useState(false);
   const [animate, setAnimate] = useState(false);
@@ -26,9 +26,58 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
   //adding animation on view using ref and useEffect
   const navRef = useRef(null);
 
-  function handleClick() {
+  function handleDarkModeClick() {
     dispatch({ type: "toggleDarkMode" });
     setAnimate(true);
+  }
+
+  function handleScrollClick(e) {
+    const val = e.target.innerText;
+
+    switch (val) {
+      case "Home":
+        dispatch({ type: "disableScroll", payload: false });
+        setNavbar(false);
+        setAnimate(true);
+        setTimeout(() => {
+          refArray[0].current?.scrollIntoView({ behavior: "smooth" });
+        }, 1900);
+        break;
+      case "About":
+        dispatch({ type: "disableScroll", payload: false });
+        setNavbar(false);
+        setAnimate(true);
+        setTimeout(() => {
+          refArray[1].current?.scrollIntoView({ behavior: "smooth" });
+        }, 1900);
+        break;
+      case "Skills":
+        dispatch({ type: "disableScroll", payload: false });
+        setNavbar(false);
+        setAnimate(true);
+        setTimeout(() => {
+          refArray[2].current?.scrollIntoView({ behavior: "smooth" });
+        }, 1900);
+        break;
+      case "Projects":
+        dispatch({ type: "disableScroll", payload: false });
+        setNavbar(false);
+        setAnimate(true);
+        setTimeout(() => {
+          refArray[3].current?.scrollIntoView({ behavior: "smooth" });
+        }, 1900);
+        break;
+      case "Contact Me":
+        dispatch({ type: "disableScroll", payload: false });
+        setNavbar(false);
+        setAnimate(true);
+        setTimeout(() => {
+          refArray[4].current?.scrollIntoView({ behavior: "smooth" });
+        }, 1900);
+        break;
+      default:
+        return new Error("Unknown Click!");
+    }
   }
 
   return (
@@ -39,7 +88,11 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
         style={darkMode ? styles : {}}
       >
         <p className="logo">{`<AB />`}</p>
-        <nav className={`navbar ${navbar ? "navbar-active" : ""}`}>
+        <nav
+          className={`navbar ${
+            navbar ? (darkMode ? "navbar-active-dark" : "navbar-active") : ""
+          }`}
+        >
           <ul className="navlinks" ref={navRef}>
             {navItemsArray.map((item, index) => {
               return (
@@ -48,20 +101,24 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
                     className={`link ${sticky ? "sticky-link" : ""}`}
                     style={
                       darkMode
-                        ? { ...styles, animationDelay: `${(index + 1) * 0.2}s` }
-                        : { animationDelay: `${(index + 1) * 0.1}s` }
+                        ? {
+                            ...styles,
+                            animationDelay: `${(index + 1) * 0.2}s`,
+                          }
+                        : {
+                            animationDelay: `${(index + 1) * 0.1}s`,
+                          }
                     }
-                    onClick={handleClick}
+                    onClick={handleScrollClick}
                   >
                     {item.text}
-                    <hr />
                   </button>
                 </li>
               );
             })}
           </ul>
         </nav>
-        <button className="dark-mode-btn" onClick={handleClick}>
+        <button className="dark-mode-btn" onClick={handleDarkModeClick}>
           {darkMode ? (
             <LuMoonStar
               className={`dark-mode ${sticky ? "sticky-dark-mode" : ""}`}
@@ -80,7 +137,7 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
               className="ham-btn open"
               onClick={() => {
                 setNavbar(true);
-                console.log("open");
+                dispatch({ type: "disableScroll", payload: true });
               }}
             >
               <RxHamburgerMenu
@@ -90,8 +147,17 @@ const Navbar = ({ sticky, darkMode, dispatch }) => {
             </button>
           )}
           {navbar && (
-            <button className="ham-btn close" onClick={() => setNavbar(false)}>
-              <CgClose className="ham-btn-icon" />
+            <button
+              className="ham-btn close"
+              onClick={() => {
+                setNavbar(false);
+                dispatch({ type: "disableScroll", payload: false });
+              }}
+            >
+              <CgClose
+                className="ham-btn-icon"
+                style={sticky || darkMode ? { color: "#fff" } : {}}
+              />
             </button>
           )}
         </div>

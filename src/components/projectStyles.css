@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .container__project {
@@ -29,15 +30,14 @@
   border-radius: 25px;
   font-family: "Poppins", sans-serif;
   font-weight: 560;
-  transition: 3.5s;
   font-size: 1rem;
+  transition: 3.5s;
   margin: 1rem;
 }
 
 .container__project p {
   font-family: "Lato", sans-serif;
   color: #2e2e2e;
-  transition: 3.5s;
   font-size: 1.2rem;
 }
 
@@ -54,6 +54,6 @@
   }
 
   .container__project p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }

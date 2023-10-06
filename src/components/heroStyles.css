@@ -8,7 +8,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-left: 8rem;
   padding-right: 8rem;
   padding-bottom: 2rem;
@@ -94,11 +94,10 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: 3s;
+  justify-content: center;
+  align-items: center;
   position: relative;
   gap: 2rem;
-  padding: 2rem;
 }
 
 .picture img {
@@ -147,8 +146,11 @@
 
 .hero-list-icons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.8rem;
+  position: absolute;
+  left: 4%;
+  top: 30%;
 }
 
 .hero-footer-icon-btn {
@@ -157,6 +159,7 @@
   padding: 0.5rem;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .hero-footer-icon-btn .icon {
@@ -166,7 +169,22 @@
 }
 
 .picture img {
-  transition: 3s;
+  height: 90%;
+  width: 80%;
+  opacity: 0;
+  animation: imageAppear 5s linear forwards;
+}
+
+@keyframes imageAppear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blob2animate {
@@ -219,7 +237,7 @@
     flex-direction: column-reverse;
     padding: 2rem 2rem;
     margin-top: 3.8rem;
-    gap: 1rem;
+    gap: 4rem;
   }
 
   .intro {
@@ -230,7 +248,6 @@
   .picture {
     width: 100%;
     gap: 5rem;
-    height: 80vh;
   }
 
   .intro h1 {
@@ -282,5 +299,11 @@
 
   .picture img {
     width: 100%;
+  }
+
+  .hero-list-icons {
+    flex-direction: row;
+    top: 40%;
+    left: 10%;
   }
 }

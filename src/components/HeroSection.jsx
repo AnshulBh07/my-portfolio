@@ -76,15 +76,15 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
           {darkMode && (
             <img src={`${darkImage}`} alt="dark" className="dark-mode-img" />
           )}
-          <div className="hero-list-icons">
-            {mediaItems.map((item, index) => {
-              return (
-                <a href={`${item.link}`} key={index}>
-                  <button className="hero-footer-icon-btn">{item.icon}</button>
-                </a>
-              );
-            })}
-          </div>
+        </div>
+        <div className="hero-list-icons">
+          {mediaItems.map((item, index) => {
+            return (
+              <a href={`${item.link}`} key={index}>
+                <button className="hero-footer-icon-btn">{item.icon}</button>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -103,7 +103,7 @@
 .navlinks li button {
   margin-top: 0;
   background-color: transparent;
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.5rem;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   border-radius: 0px;
@@ -112,6 +112,23 @@
   border: none;
   font-size: 1.1rem;
   border-radius: 8px;
+  position: relative;
+}
+
+.navlinks li button::after {
+  content: "";
+  width: 0%;
+  background-color: #212121;
+  height: 3px;
+  border-bottom: 3px;
+  left: 0;
+  top: 100%;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.navlinks li button:hover::after {
+  width: 100%;
 }
 
 .navlinks li button hr {

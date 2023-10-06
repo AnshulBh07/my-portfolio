@@ -13,7 +13,6 @@
   padding-right: 8rem;
   display: flex;
   flex-direction: row-reverse;
-  transition: 3s;
   position: relative;
   gap: 5rem;
 }
@@ -171,7 +170,7 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  animation: imageAppear 5s linear forwards;
+  animation: imageAppear 2s linear forwards;
 }
 
 @keyframes imageAppear {

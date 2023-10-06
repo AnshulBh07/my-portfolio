@@ -54,6 +54,6 @@ export const projectsList = [
       "Implemented a famous mathematical board game called 2048.A tile sliding block puzzle where the user's objective is to combine grids to create a tile with the number 2048. However user can continue the game and create up to 8192",
     tech: ["JavaScript", "HTML", "CSS"],
     gitlink: "https://github.com/AnshulBh07/2048-Game-in-Javascript",
-    demolink: "",
+    demolink: "https://borks-2048clone.netlify.app/",
   },
 ];

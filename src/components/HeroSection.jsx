@@ -1,9 +1,10 @@
 import "./heroStyles.css";
-import Blob from "../assets/images/blob.svg";
+// import Blob from "../assets/images/blob.svg";
 // import Blob2 from "../assets/images/blob2.svg";
 import { IoLocationOutline } from "react-icons/io5";
 import darkImage from "../assets/images/darkModeImage.png";
-import { mediaItems } from "../socialMediaItems";
+import { mediaItemsDark, mediaItemsLight } from "../socialMediaItems";
+import lightImage from "../assets/images/lightModeImage.png";
 // import Blob3 from "../assets/images/blob3.svg";
 // import Blob4 from "../assets/images/blob2 - Copy.svg";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
@@ -72,19 +73,30 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
         </div>
 
         <div className="picture">
-          {!darkMode && <img src={Blob} alt="" className="blob" />}
           {darkMode && (
             <img src={`${darkImage}`} alt="dark" className="dark-mode-img" />
           )}
+          {!darkMode && <img src={`${lightImage}`} alt="light-mode-img" />}
         </div>
-        <div className="hero-list-icons">
-          {mediaItems.map((item, index) => {
-            return (
-              <a href={`${item.link}`} key={index}>
-                <button className="hero-footer-icon-btn">{item.icon}</button>
-              </a>
-            );
-          })}
+        <div className={`hero-list-icons ${!darkMode ? "light" : ""}`}>
+          {darkMode &&
+            mediaItemsDark.map((item, index) => {
+              return (
+                <a href={`${item.link}`} key={index}>
+                  <button className="hero-footer-icon-btn ">{item.icon}</button>
+                </a>
+              );
+            })}
+          {!darkMode &&
+            mediaItemsLight.map((item, index) => {
+              return (
+                <a href={`${item.link}`} key={index}>
+                  <button className="hero-footer-icon-btn ">
+                    <img src={`${item.icon}`} alt="" />
+                  </button>
+                </a>
+              );
+            })}
         </div>
       </div>
     </section>

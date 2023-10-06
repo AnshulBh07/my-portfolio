@@ -1,5 +1,5 @@
 import "./contactStyles.css";
-import { mediaItems } from "../socialMediaItems";
+import { mediaItemsDark } from "../socialMediaItems";
 import ContactForm from "./ContactForm";
 
 const ContactMe = ({ darkMode, contactRef }) => {
@@ -28,7 +28,7 @@ const ContactMe = ({ darkMode, contactRef }) => {
                     You can find me on the following social media platforms.
                   </p>
                   <div className="list-icons">
-                    {mediaItems.map((item, index) => {
+                    {mediaItemsDark.map((item, index) => {
                       return (
                         <a href={`${item.link}`} key={index}>
                           <button className="footer-icon-btn">

@@ -4,10 +4,14 @@ import { LuMoonStar } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 import "./navStyles.css";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import TransitionEffect from "./TransitionEffect";
+import { PortfolioContext } from "../App";
 
-const Navbar = ({ sticky, darkMode, dispatch, refArray }) => {
+const Navbar = () => {
+  //consuming context
+  const { sticky, darkMode, dispatch, refArray } = useContext(PortfolioContext);
+
   const styles = { color: "#fff", backgroundColor: "#212121" };
   const [navbar, setNavbar] = useState(false);
   const [animate, setAnimate] = useState(false);

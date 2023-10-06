@@ -3,10 +3,14 @@ import { skills } from "../skillsList";
 import FlatBar from "./FlatBar";
 import CircleProgress from "./CircleProgress";
 import { profSkills } from "../profSkillItems";
+import { PortfolioContext } from "../App";
+import { useContext } from "react";
 
-const Skills = ({ graphRef, inview, darkMode, skillsRef }) => {
+const Skills = () => {
+  const { refArray, inview, darkMode } = useContext(PortfolioContext);
+
   return (
-    <section className="section__skills" id="skills" ref={skillsRef}>
+    <section className="section__skills" id="skills" ref={refArray[2]}>
       <div
         className="container__skills"
         style={darkMode ? { backgroundColor: "#212121" } : {}}
@@ -39,7 +43,7 @@ const Skills = ({ graphRef, inview, darkMode, skillsRef }) => {
 
         <hr />
 
-        <div className="skill__graphics" ref={graphRef}>
+        <div className="skill__graphics" ref={refArray[5]}>
           <div className="tech__skills">
             <h2 style={darkMode ? { color: "#d5d5d5" } : {}}>
               Technical Skills
@@ -72,8 +76,6 @@ const Skills = ({ graphRef, inview, darkMode, skillsRef }) => {
                     key={index}
                     name={skill.name}
                     prof={skill.prof}
-                    inview={inview}
-                    darkMode={darkMode}
                   />
                 );
               })}

@@ -1,9 +1,13 @@
 import "./aboutStyles.css";
 import Pic2 from "../assets/images/photo2.png";
+import { PortfolioContext } from "../App";
+import { useContext } from "react";
 
-const About = ({ darkMode, aboutRef }) => {
+const About = () => {
+  const { darkMode, refArray } = useContext(PortfolioContext);
+
   return (
-    <section className="section__about" id="about" ref={aboutRef}>
+    <section className="section__about" id="about" ref={refArray[1]}>
       <div
         className="container__about"
         style={darkMode ? { backgroundColor: "#2d2d2d" } : {}}

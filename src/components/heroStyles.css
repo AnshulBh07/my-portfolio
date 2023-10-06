@@ -11,10 +11,9 @@
   padding-top: 5rem;
   padding-left: 8rem;
   padding-right: 8rem;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: row-reverse;
-  transition: 3.5s;
+  transition: 3s;
   position: relative;
   gap: 5rem;
 }

@@ -2,10 +2,14 @@ import ProjectCard from "./ProjectCard";
 import "./projectStyles.css";
 import { projectsList } from "../projects";
 import TransitionEffect from "./TransitionEffect";
+import { PortfolioContext } from "../App";
+import { useContext } from "react";
 
-const Projects = ({ darkMode, projectsRef }) => {
+const Projects = () => {
+  const { darkMode, refArray } = useContext(PortfolioContext);
+
   return (
-    <section className="section__project" id="projects" ref={projectsRef}>
+    <section className="section__project" id="projects" ref={refArray[3]}>
       <TransitionEffect />
       <div
         className="container__project"
@@ -24,14 +28,7 @@ const Projects = ({ darkMode, projectsRef }) => {
         <div className="container__main">
           {/* create project cards from array here */}
           {projectsList.map((project, index) => {
-            return (
-              <ProjectCard
-                key={index}
-                project={project}
-                index={index}
-                darkMode={darkMode}
-              />
-            );
+            return <ProjectCard key={index} project={project} index={index} />;
           })}
         </div>
       </div>

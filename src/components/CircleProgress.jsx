@@ -1,7 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import "./circleProgress.css";
+import { PortfolioContext } from "../App";
 
-const CircleProgress = ({ inview, name, prof, darkMode }) => {
+const CircleProgress = ({ name, prof }) => {
+  const { inview, darkMode } = useContext(PortfolioContext);
   //again using ref to store the element and then to add increasing bar effect we use useEffect
   //to change the css property at every given interval
 

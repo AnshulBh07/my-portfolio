@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef } from "react";
+import { createContext, useEffect, useReducer, useRef } from "react";
 import "./App.css";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
@@ -32,6 +32,9 @@ function reducer(state, action) {
       return state;
   }
 }
+
+//optimizing app to remove prop drilling
+export const PortfolioContext = createContext(null);
 
 function App() {
   const [{ sticky, darkMode, inview, scrlDisable }, dispatch] = useReducer(
@@ -84,33 +87,52 @@ function App() {
   const contactRef = useRef(null);
 
   //push all refs into an array
-  const refArray = [heroRef, aboutRef, skillsRef, projectsRef, contactRef];
+  const refArray = [
+    heroRef,
+    aboutRef,
+    skillsRef,
+    projectsRef,
+    contactRef,
+    graphRef,
+  ];
 
   return (
-    <div className={`App ${scrlDisable ? "scroll-disable" : ""}`}>
-      <Navbar
-        darkMode={darkMode}
-        sticky={sticky}
-        dispatch={dispatch}
-        refArray={refArray}
-      />
-      <HeroSection
-        darkMode={darkMode}
-        sticky={sticky}
-        dispatch={dispatch}
-        heroRef={heroRef}
-        refArray={refArray}
-      />
-      <About darkMode={darkMode} aboutRef={aboutRef} />
-      <Skills
-        graphRef={graphRef}
-        inview={inview}
-        darkMode={darkMode}
-        skillsRef={skillsRef}
-      />
-      <Projects darkMode={darkMode} projectsRef={projectsRef} />
-      <ContactMe darkMode={darkMode} contactRef={contactRef} />
-    </div>
+    // include all the props that are being passed down to children
+    <PortfolioContext.Provider
+      value={{
+        darkMode,
+        sticky,
+        refArray,
+        inview,
+
+        dispatch,
+      }}
+    >
+      <div className={`App ${scrlDisable ? "scroll-disable" : ""}`}>
+        <Navbar
+          darkMode={darkMode}
+          sticky={sticky}
+          dispatch={dispatch}
+          refArray={refArray}
+        />
+        <HeroSection
+          darkMode={darkMode}
+          sticky={sticky}
+          dispatch={dispatch}
+          heroRef={heroRef}
+          refArray={refArray}
+        />
+        <About darkMode={darkMode} aboutRef={aboutRef} />
+        <Skills
+          graphRef={graphRef}
+          inview={inview}
+          darkMode={darkMode}
+          skillsRef={skillsRef}
+        />
+        <Projects darkMode={darkMode} projectsRef={projectsRef} />
+        <ContactMe darkMode={darkMode} contactRef={contactRef} />
+      </div>
+    </PortfolioContext.Provider>
   );
 }
 

@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import "./projectCardStyles.css";
+import { PortfolioContext } from "../App";
 
-const ProjectCard = ({ project, index, darkMode }) => {
+const ProjectCard = ({ project, index }) => {
   const cardRef = useRef(null);
+  const { darkMode } = useContext(PortfolioContext);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

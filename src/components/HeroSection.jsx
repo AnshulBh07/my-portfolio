@@ -8,8 +8,12 @@ import lightImage from "../assets/images/lightModeImage.png";
 // import Blob3 from "../assets/images/blob3.svg";
 // import Blob4 from "../assets/images/blob2 - Copy.svg";
 // import Blob5 from "../assets/images/blob3 - Copy.svg";
+import { PortfolioContext } from "../App";
+import { useContext } from "react";
 
-const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
+const HeroSection = () => {
+  const { darkMode, refArray } = useContext(PortfolioContext);
+
   const style = {
     backgroundColor: "#212121",
     color: "#fff",
@@ -21,7 +25,7 @@ const HeroSection = ({ darkMode, heroRef, refArray, dispatch }) => {
   }
 
   return (
-    <section className="section__hero" id="hero" ref={heroRef}>
+    <section className="section__hero" id="hero" ref={refArray[0]}>
       <div className="container__hero" style={darkMode ? style : {}}>
         {/* {darkMode ? (
           <img src={`${Blob4}`} alt="" className="blob2" />

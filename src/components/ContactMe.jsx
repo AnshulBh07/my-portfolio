@@ -1,11 +1,15 @@
 import "./contactStyles.css";
 import { mediaItemsDark } from "../socialMediaItems";
 import ContactForm from "./ContactForm";
+import { PortfolioContext } from "../App";
+import { useContext } from "react";
 
-const ContactMe = ({ darkMode, contactRef }) => {
+const ContactMe = () => {
+  const { darkMode, refArray } = useContext(PortfolioContext);
+
   return (
     <footer>
-      <section className="section__contact" id="contact me" ref={contactRef}>
+      <section className="section__contact" id="contact me" ref={refArray[4]}>
         <div
           className="container__contact__main"
           style={darkMode ? { backgroundColor: "#212121" } : {}}

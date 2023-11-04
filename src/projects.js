@@ -2,8 +2,31 @@ import WeatherApp from "./assets/images/weather-app.png";
 import Game2048 from "./assets/images/2048.png";
 import Dashboard from "./assets/images/dashboard.png";
 import QuizApp from "./assets/images/quiz-app.png";
+import Furniro from "./assets/images/furniro.png";
 
 export const projectsList = [
+  {
+    name: "Fullstack eCommerce App",
+    thumbnail: Furniro,
+    description:
+      "Created a full stack eCommerce app with React for front end and Express.js for back end. Uses PostgreSQL to maintain database for complete web app. Supports functionalities like adding and removing items from cart where all the items are persisted in local storage of web browser. Provides various filtering and sorting methods. Supports google sign-in with Auth2.0 as well as manual login. Implements payment gateway for smooth transaction",
+    tech: [
+      "React.js",
+      "React Redux",
+      "React Query",
+      "SASS",
+      "Axios",
+      "Prisma",
+      "PostgreSQL",
+      "Node.js",
+      "Express.js",
+      "OAuth 2.0",
+      "RESTful API",
+      "Vercel",
+    ],
+    gitlink: "https://github.com/AnshulBh07/Furniro-eCommerce-app",
+    demolink: "https://furniro-e-commerce-app-frontend.vercel.app/",
+  },
   {
     name: "Weather App",
     thumbnail: WeatherApp,

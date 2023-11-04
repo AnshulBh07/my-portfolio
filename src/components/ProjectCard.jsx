@@ -31,7 +31,11 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       className={`container__project-card ${index % 2 !== 0 ? "odd-card" : ""}`}
-      style={darkMode ? { boxShadow: "2px 4px 10px #212121" } : {}}
+      style={
+        darkMode
+          ? { boxShadow: "2px 4px 10px #212121", backgroundColor: "#212121" }
+          : {}
+      }
       ref={cardRef}
     >
       <div className="thumbnail">
@@ -39,7 +43,10 @@ const ProjectCard = ({ project, index }) => {
       </div>
       <div className="project__info" style={darkMode ? { color: "#fff" } : {}}>
         <h2>{project.name}</h2>
-        <p style={darkMode ? { color: "#d5d5d5" } : {}}>
+        <p
+          style={darkMode ? { color: "#d5d5d5" } : {}}
+          className="project-desc"
+        >
           {project.description}
         </p>
         <div className="tech-stack">
@@ -51,7 +58,7 @@ const ProjectCard = ({ project, index }) => {
                 disabled={true}
                 style={
                   darkMode
-                    ? { backgroundColor: "#212121", color: "#d5d5d5" }
+                    ? { backgroundColor: "#1b1b1b", color: "#d5d5d5" }
                     : {}
                 }
               >
